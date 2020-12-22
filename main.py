@@ -24,19 +24,6 @@ def chrome():
     # waits for 0.5 seconds
     time.sleep(0.5)
 
-    # to make full screen:
-    
-    # holds command
-    pg.keyDown('command')
-    # holds control
-    pg.keyDown('control')
-    # presses f
-    pg.hotkey('f')
-    # releases control
-    pg.keyUp('control')
-    # releases command
-    pg.keyUp('command')
-
 # ---------------------------
 
 def terminal():
@@ -60,19 +47,6 @@ def terminal():
 
     # waits for 0.5 seconds
     time.sleep(0.5)
-
-    # to make full screen:
-
-    # holds command
-    pg.keyDown('command')
-    # holds control
-    pg.keyDown('control')
-    # presses f
-    pg.hotkey('f')
-    # releases control
-    pg.keyUp('control')
-    # releases command
-    pg.keyUp('command')
 
 # ---------------------------
 
@@ -99,15 +73,26 @@ def discord():
     time.sleep(0.5)
 
 
-    # to make full screen:
-    
+# ---------------------------
+
+def vsCode():
+    """ 
+    This Function opens spotlight,
+    waits for 1 second, then opens VS Code.
+    after VS Code opens, it makes the VS Code full screen
+    """
     # holds command
     pg.keyDown('command')
-    # holds control
-    pg.keyDown('control')
-    # presses f
-    pg.hotkey('f')
-    # releases control
-    pg.keyUp('control')
+    # presses space
+    pg.hotkey('space')
     # releases command
     pg.keyUp('command')
+    
+    # waits for 1 second
+    time.sleep(1)
+
+    # types Visual Studio Code with pauses of 0.2 seconds
+    pg.typewrite('visual studio code\n', 0.2)
+
+    # waits for 0.5 seconds
+    time.sleep(0.5)
