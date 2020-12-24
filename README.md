@@ -8,7 +8,7 @@
 **Feel Free To Add your Own Functions That You Use In. Your Daily Life.**
 
 <br>
-We Provided 6 Free Buttons Fou You To Add so To do it You Need basic Python Experience.
+We Provided 6 Free Buttons For You To Add Your Own Functions. To do it You Need basic Python Experience.
 
  We gave a small example of how to make functions for the free buttons
 
