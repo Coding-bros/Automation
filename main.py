@@ -4,19 +4,29 @@ import pyautogui as pg
 import time 
 # importing pyautogui and time
 import pyautogui as pg
-import time 
-
+import time
+import json
 
 window = Tk()
-# Settings/Preferences Of the Main Window
-window.geometry('1000x600')
-window.title('Automate')
-window.config(bg="#444444")
+
+if sys.platform.startswith('win32'):
+    from windows_support import *
+
+#load in settings from json file
+with open("settings.json","r") as file:
+    content = file.read()
+    settings = json.loads(content)
+
+window_settings = settings['window']
+
+window.geometry(window_settings['resolution'])
+window.title(window_settings["title"])
+window.config(bg=window_settings['bg'])
+
+del window_settings #garbage collection
 
 def exit():
-    """
-    This Function Is Used to Quit the Windows Using the Quit Button 
-    """
+    #This Function Is Used to Quit the Windows Using the Quit Button 
     sys.exit()
 # Opening Functions
 
@@ -26,6 +36,9 @@ def chrome():
     waits for 1 second, then opens chrome.
     after chrome opens, it 
     """
+    if sys.platform.startswith('win32'):
+        chrome_windows()
+        return
     # holds command
     pg.keyDown('command')
     # presses space
@@ -88,7 +101,6 @@ def discord():
     # waits for 0.5 seconds
     time.sleep(0.5)
 
-
 # ---------------------------
 
 def vsCode():
@@ -111,9 +123,6 @@ def vsCode():
 
     # waits for 0.5 seconds
     time.sleep(0.5)
-
-
-
 
 # Setting Buttons
 
