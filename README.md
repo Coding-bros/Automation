@@ -43,7 +43,7 @@ this is default in **MacOS** , no need to install if you have Python installed
 #
 **PyAutoGui**
 
-		pip install pyautogui
+		pip3 install pyautogui
 
 #
 ### If the code doesn't work :
