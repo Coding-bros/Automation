@@ -6,9 +6,9 @@ import sys
 
 """
 Pyautogui : Automation
-Time : To make the automation a bit slower
+Time : To Add Pauses In Automation
 tkinter : GUI
-sys : To close the window
+sys : To Close The Window
 """
 
 #-----------------------------
