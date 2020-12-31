@@ -1,6 +1,8 @@
 # importing pyautogui and time
 import pyautogui as pg
 import time 
+from tkinter import *
+import sys
 
 def chrome():
     """ 
@@ -106,9 +108,6 @@ def chrome():
     waits for 1 second, then opens chrome.
     after chrome opens, it 
     """
-    if sys.platform.startswith('win32'):
-        chrome_windows()
-        return
     # holds command
     pg.keyDown('command')
     # presses space
@@ -195,6 +194,9 @@ def vsCode():
     time.sleep(0.5)
 
 # Setting Buttons
+
+window = Tk()
+window.geometry("1024x900")
 
 Button(text="Open Chrome", height=3, width=30, command=chrome).place(relx = 0.023, rely=0.010)
 
