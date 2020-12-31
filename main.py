@@ -1,231 +1,261 @@
-
 # importing pyautogui and time
 import pyautogui as pg
 import time 
 from tkinter import *
 import sys
 
-def chrome():
-    """ 
-    This Function opens spotlight,
-    waits for 1 second, then opens chrome.
-    after chrome opens, it makes the chrome full screen
-    """
-    # holds command
-    pg.keyDown('command')
-    # presses space
-    pg.hotkey('space')
-    # releases command
-    pg.keyUp('command')
-    
-    # waits for 1 second
-    time.sleep(1)
+"""
+Pyautogui : Automation
+Time : To make the automation a bit slower
+tkinter : GUI
+sys : To close the window
+"""
 
-    # types chrome in 0.3 seconds
-    pg.typewrite('chrome\n', 0.3)
+#-----------------------------
 
-    # waits for 3 seconds
-    time.sleep(3)
+ask = input('Are You On Mac Or Windows Or Linux: ')
 
-# ---------------------------
+# mac
 
-def terminal():
-    """ 
-    This Function opens spotlight,
-    waits for 1 second, then opens terminal.
-    after terminal opens, it makes the terminal full screen
-    """
-    # holds command
-    pg.keyDown('command')
-    # presses space
-    pg.hotkey('space')
-    # releases command
-    pg.keyUp('command')
-    
-    # waits for 1 second
-    time.sleep(1)
+if ask.strip().lower() == 'mac':
+    def chromeM():
+        """ 
+        This Function opens spotlight,
+        waits for 1 second, then opens chrome.
+        """
+        # holds command
+        pg.keyDown('command')
+        # presses space
+        pg.hotkey('space')
+        # releases command
+        pg.keyUp('command')
+        
+        # waits for 1 second
+        time.sleep(1)
 
-    # types terminal with pauses of 0.3 seconds
-    pg.typewrite('terminal\n', 0.3)
+        # types chrome in 0.3 seconds
+        pg.typewrite('chrome\n', 0.3)
 
-    # waits for 3 seconds
-    time.sleep(3)
+        # waits for 3 seconds
+        time.sleep(3)
 
-# ---------------------------
-
-def discord():
-    """ 
-    This Function opens spotlight,
-    waits for 1 second, then opens discord.
-    after discord opens, it makes the discord full screen
-    """
-    # holds command
-    pg.keyDown('command')
-    # presses space
-    pg.hotkey('space')
-    # releases command
-    pg.keyUp('command')
-    
-    # waits for 1 second
-    time.sleep(1)
-
-    # types discord with pauses of 0.3 seconds
-    pg.typewrite('discord\n', 0.3)
-
-    # waits for 3 seconds
-    time.sleep(3)
     # ---------------------------
 
-def vsCode():
-    """ 
-    This Function opens spotlight,
-    waits for 1 second, then opens vsCode.
-    after vsCode opens, it makes the vsCode full screen
-    """
-    # holds command
-    pg.keyDown('command')
-    # presses space
-    pg.hotkey('space')
-    # releases command
-    pg.keyUp('command')
+    def terminalM():
+        """ 
+        This Function opens spotlight,
+        waits for 1 second, then opens terminal.
+        """
+        # holds command
+        pg.keyDown('command')
+        # presses space
+        pg.hotkey('space')
+        # releases command
+        pg.keyUp('command')
+        
+        # waits for 1 second
+        time.sleep(1)
+
+        # types terminal with pauses of 0.3 seconds
+        pg.typewrite('terminal\n', 0.3)
+
+        # waits for 3 seconds
+        time.sleep(3)
+
+    # ---------------------------
+
+    def discordM():
+        """ 
+        This Function opens spotlight,
+        waits for 1 second, then opens discord.
+        """
+        # holds command
+        pg.keyDown('command')
+        # presses space
+        pg.hotkey('space')
+        # releases command
+        pg.keyUp('command')
+        
+        # waits for 1 second
+        time.sleep(1)
+
+        # types discord with pauses of 0.3 seconds
+        pg.typewrite('discord\n', 0.3)
+
+        # waits for 3 seconds
+        time.sleep(3)
+        # ---------------------------
+
+    def vsCodeM():
+        """ 
+        This Function opens spotlight,
+        waits for 1 second, then opens vsCode.
+        """
+        # holds command
+        pg.keyDown('command')
+        # presses space
+        pg.hotkey('space')
+        # releases command
+        pg.keyUp('command')
+        
+        # waits for 1 second
+        time.sleep(1)
+
+        # types vsCode with pauses of 0.3 seconds
+        pg.typewrite('visual studio code\n', 0.3)
+
+        # waits for 3 seconds
+        time.sleep(3) 
     
-    # waits for 1 second
-    time.sleep(1)
+    # GUI (Mac)
 
-    # types vsCode with pauses of 0.3 seconds
-    pg.typewrite('visual studio code\n', 0.3)
+    window = Tk()
+    window.geometry("1024x900")
 
-    # waits for 3 seconds
-    time.sleep(3)
+    Button(text="Open Chrome", height=3, width=30, command=chromeM).place(relx = 0.023, rely=0.010)
 
-def exit():
-    #This Function Is Used to Quit the Windows Using the Quit Button 
-    sys.exit()
-# Opening Functions
+    Button(text="Open Discord", height=3, width=30, command = discordM).place(relx = 0.023, rely=0.2)
 
-def chrome():
-    """ 
-    This Function opens spotlight,
-    waits for 1 second, then opens chrome.
-    after chrome opens, it 
-    """
-    # holds command
-    pg.keyDown('command')
-    # presses space
-    pg.hotkey('space')
-    # releases command
-    pg.keyUp('command')
-    
-    # waits for 1 second
-    time.sleep(1)
+    Button(text="Open terminal", height=3, width=30, command = terminalM).place(relx = 0.023, rely=0.4)
 
-    # types chrome in 0.3 seconds
-    pg.typewrite('chrome\n', 0.3)
+    Button(text="Visual Studio Code", height=3, width=30, command = vsCodeM).place(relx = 0.023, rely=0.6)
 
-    # waits for 0.5 seconds
-    time.sleep(0.5)
+    # Extra Buttons For the User (Mac)
 
-# ---------------------------
+    Button(text="Extra", height=3, width=30).place(relx = 0.023, rely=0.8)
 
-def terminal():
-    """ 
-    This Function opens spotlight,
-    waits for 1 second, then opens terminal.
-    """
-    # holds command
-    pg.keyDown('command')
-    # presses space
-    pg.hotkey('space')
-    # releases command
-    pg.keyUp('command')
-    
-    # waits for 1 second
-    time.sleep(1)
+    Button(text="Extra", height=3, width=30).place(relx = 0.023, rely=1)
 
-    # types terminal with pauses of 0.3 seconds
-    pg.typewrite('terminal\n', 0.3)
+    Button(text="Extra", height=3, width=30).place(relx = 0.7, rely=0.010)
 
-    # waits for 0.5 seconds
-    time.sleep(0.5)
+    Button(text="Extra", height=3, width=30).place(relx = 0.7, rely=0.2)
 
-# ---------------------------
+    Button(text="Extra", height=3, width=30).place(relx = 0.7, rely=0.4)
 
-def discord():
-    """ 
-    This Function opens spotlight,
-    waits for 1 second, then opens discord
-    """
-    # holds command
-    pg.keyDown('command')
-    # presses space
-    pg.hotkey('space')
-    # releases command
-    pg.keyUp('command')
-    
-    # waits for 1 second
-    time.sleep(1)
+    Button(text="Extra", height=3, width=30).place(relx = 0.7, rely=0.6)
 
-    # types discord with pauses of 0.3 seconds
-    pg.typewrite('discord\n', 0.3)
+    Button(text="Extra", height=3, width=30).place(relx = 0.7, rely=0.8)
 
-    # waits for 0.5 seconds
-    time.sleep(0.5)
+    # Quit Button
 
-# ---------------------------
+    quit_button = Button(text="Exit", bg="red", height=3, width=30, command=exit)
+    quit_button.place(relx = 0.355, rely=0.4)
 
-def vsCode():
-    """ 
-    This Function opens spotlight,
-    waits for 1 second, then opens VS Code.
-    """
-    # holds command
-    pg.keyDown('command')
-    # presses space
-    pg.hotkey('space')
-    # releases command
-    pg.keyUp('command')
-    
-    # waits for 1 second
-    time.sleep(1)
+    # MainLoop
 
-    # types Visual Studio Code with pauses of 0.2 seconds
-    pg.typewrite('visual studio code\n', 0.2)
+    window.mainloop()
+# ---------------------------------
 
-    # waits for 0.5 seconds
-    time.sleep(0.5)
+# windows or linux
 
-# Setting Buttons
+if ask.strip().lower() == 'windows' or ask.strip().lower() == 'linux':
+    def chrome():
+        """ 
+        This Function opens start menu,
+        waits for 1 second, then opens chrome.
+        """
+        # presses the start menu button
+        pg.hotkey('winleft')
+        
+        # waits for 1 second
+        time.sleep(1)
 
-window = Tk()
-window.geometry("1024x900")
+        # types chrome in 0.3 seconds
+        pg.typewrite('chrome\n', 0.3)
 
-Button(text="Open Chrome", height=3, width=30, command=chrome).place(relx = 0.023, rely=0.010)
+        # waits for 3 seconds
+        time.sleep(3)
 
-Button(text="Open Discord", height=3, width=30, command = discord).place(relx = 0.023, rely=0.2)
+    # ---------------------------
 
-Button(text="Open terminal", height=3, width=30, command = terminal).place(relx = 0.023, rely=0.4)
+    def terminal():
+        """ 
+        This Function opens start menu,
+        waits for 1 second, then opens terminal.
+        """
+        # presses the start menu button
+        pg.hotkey('winleft')
+        
+        # waits for 1 second
+        time.sleep(1)
 
-Button(text="Visual Studio Code", height=3, width=30, command = vsCode).place(relx = 0.023, rely=0.6)
+        # types terminal with pauses of 0.3 seconds
+        pg.typewrite('terminal\n', 0.3)
 
-Button(text="Test", height=3, width=30).place(relx = 0.023, rely=0.8)
+        # waits for 3 seconds
+        time.sleep(3)
 
-Button(text="Test", height=3, width=30).place(relx = 0.023, rely=1)
+    # ---------------------------
 
-Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.010)
+    def discord():
+        """ 
+        This Function opens start menu,
+        waits for 1 second, then opens discord.
+        """
+        # presses the start menu button
+        pg.hotkey('winleft')
+        
+        # waits for 1 second
+        time.sleep(1)
 
-Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.2)
+        # types discord with pauses of 0.3 seconds
+        pg.typewrite('discord\n', 0.3)
 
-Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.4)
+        # waits for 3 seconds
+        time.sleep(3)
+        # ---------------------------
 
-Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.6)
+    def vsCode():
+        """ 
+        This Function opens start menu,
+        waits for 1 second, then opens vsCode.
+        """
+        # presses the start menu button
+        pg.hotkey('winleft')
+        
+        # waits for 1 second
+        time.sleep(1)
 
-Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.8)
+        # types vsCode with pauses of 0.3 seconds
+        pg.typewrite('visual studio code\n', 0.3)
 
-# Quit Button
+        # waits for 3 seconds
+        time.sleep(3) 
 
-quit_button = Button(text="Exit", bg="red", height=3, width=30, command=exit)
-quit_button.place(relx = 0.355, rely=0.4)
+    # GUI (windows & linux)
+    window = Tk()
+    window.geometry("1024x900")
 
-# MainLoop
+    Button(text="Open Chrome", height=3, width=30, command=chrome).place(relx = 0.023, rely=0.010)
 
-window.mainloop()
+    Button(text="Open Discord", height=3, width=30, command = discord).place(relx = 0.023, rely=0.2)
+
+    Button(text="Open terminal", height=3, width=30, command = terminal).place(relx = 0.023, rely=0.4)
+
+    Button(text="Visual Studio Code", height=3, width=30, command = vsCode).place(relx = 0.023, rely=0.6)
+
+    # Extra buttons for the user (windows or linux)
+
+    Button(text="Test", height=3, width=30).place(relx = 0.023, rely=0.8)
+
+    Button(text="Test", height=3, width=30).place(relx = 0.023, rely=1)
+
+    Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.010)
+
+    Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.2)
+
+    Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.4)
+
+    Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.6)
+
+    Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.8)
+
+    # Quit Button
+
+    quit_button = Button(text="Exit", bg="red", height=3, width=30, command=exit)
+    quit_button.place(relx = 0.355, rely=0.4)
+
+    # MainLoop
+
+    window.mainloop()
+
