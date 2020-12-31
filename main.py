@@ -122,19 +122,19 @@ if ask.strip().lower() == 'mac':
 
     # Extra Buttons For the User (Mac)
 
-    Button(text="Test", height=3, width=30).place(relx = 0.023, rely=0.8)
+    Button(text="Extra", height=3, width=30).place(relx = 0.023, rely=0.8)
 
-    Button(text="Test", height=3, width=30).place(relx = 0.023, rely=1)
+    Button(text="Extra", height=3, width=30).place(relx = 0.023, rely=1)
 
-    Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.010)
+    Button(text="Extra", height=3, width=30).place(relx = 0.7, rely=0.010)
 
-    Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.2)
+    Button(text="Extra", height=3, width=30).place(relx = 0.7, rely=0.2)
 
-    Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.4)
+    Button(text="Extra", height=3, width=30).place(relx = 0.7, rely=0.4)
 
-    Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.6)
+    Button(text="Extra", height=3, width=30).place(relx = 0.7, rely=0.6)
 
-    Button(text="Test", height=3, width=30).place(relx = 0.7, rely=0.8)
+    Button(text="Extra", height=3, width=30).place(relx = 0.7, rely=0.8)
 
     # Quit Button
 
