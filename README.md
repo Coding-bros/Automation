@@ -40,12 +40,16 @@ Press Command + Space and then type **terminal**
 **Tkinter**
 
 this is default in **MacOS** , no need to install if you have Python installed
+for **linux**:
+
+    sudo apt-get install python3-tk
 #
 **PyAutoGui**
 
 		pip3 install pyautogui
 
 #
+
 ### If the code doesn't work :
 python3 -m venv (any name for the virtual env)
 
