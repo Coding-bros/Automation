@@ -82,7 +82,8 @@ Button(text="Test", command=Your_Function)
 **Thats How You define Your Own Functions**
 #
 
-### Keep In Mind that For Now The Code is only Made for Mac We will Try To Do It For ***Windows*** and ***Linux*** soon.
+### The Code is Supported in All OSes
+
 #
 
 ## code
